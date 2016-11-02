@@ -28,7 +28,8 @@ This repository contains image processing pipe-line for specularity removal for 
 ```
 Below images illustrate the processing steps to detect and enlarge the specular region from a given endoscopic image. Note that this image obtained from the study [1].
 ![Processing steps illustration](figs/process.png)
-
+Obtained results via performing Telea and Navier-Stokes methods. It should be mentioned that a different algorithm was performed by the study in [1].
+![Processing steps illustration](figs/res.png)
 
 
 **Reference**  
