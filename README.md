@@ -26,6 +26,10 @@ This repository contains image processing pipe-line for specularity removal for 
     ns = cv2.inpaint(img, enlarged_spec, radius, cv2.INPAINT_NS)
 
 ```
+Below images illustrate the processing steps to detect and enlarge the specular region from a given endoscopic image. Note that this image obtained from the study [1].
+![Processing steps illustration](figs/process.png)
+
+
 
 **Reference**  
 [1] S. Tchoulack, J. M. Pierre Langlois and F. Cheriet, "A video stream processor for real-time detection and correction of specular reflections in endoscopic images," Circuits and Systems and TAISA Conference, 2008. NEWCAS-TAISA 2008. 2008 Joint 6th International IEEE Northeast Workshop on, Montreal, QC, 2008, pp. 49-52.  
