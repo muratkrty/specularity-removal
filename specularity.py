@@ -55,7 +55,7 @@ def check_pixel_specularity(mimg, simg):
     
     return spec_mask
 
-def enlarge_specularirty(spec_mask):
+def enlarge_specularity(spec_mask):
     ''' Use sliding window technique to enlarge specularity
         simply move window over the image if specular pixel detected
         mark center pixel is specular
