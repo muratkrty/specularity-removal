@@ -3,9 +3,9 @@
 This repository contains image processing pipe-line for specularity removal for endoscopic images/videos. A method for extracting specular map was adapted and modified from the study [1, 2, 3]. Unfortunately, the data set used in study [1] is not available to test the repository, yet [Hamlyn](http://hamlyn.doc.ic.ac.uk/vision/) endoscopic videos were processed to implement detection and removal methods.
 
 ```python
-	# Detection and removal based on study [1].
+    # Detection and removal based on study [1].
     # Note that notations (r_, m_, s_) are adapted from the paper.
-	import cv2
+    import cv2
     import numpy as np
     import specularity as spc  
 
