@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import specularity as spc  
 
-impath = 'figs/153.jpg'
+impath = 'figs/original.png'
 img = cv2.imread(impath)
 gray_img = spc.derive_graym(impath)
 
@@ -20,8 +20,8 @@ radius = 12
 telea = cv2.inpaint(img, enlarged_spec, radius, cv2.INPAINT_TELEA)
 ns = cv2.inpaint(img, enlarged_spec, radius, cv2.INPAINT_NS)
 
-cv2.imwrite('figs/153_telea.png',telea)
-cv2.imwrite('figs/153_ns.png',ns)
+cv2.imwrite('figs/Impainted_telea.png',telea)
+cv2.imwrite('figs/Impainted_ns.png',ns)
 
 
 
