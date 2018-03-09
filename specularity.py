@@ -10,7 +10,8 @@ def derive_graym(impath):
         grayscalse will do same operation!
         opencv uses default formula Y = 0.299 R + 0.587 G + 0.114 B
     '''
-    return cv2.imread(impath, cv2.CV_LOAD_IMAGE_GRAYSCALE)
+    # return cv2.imread(impath, cv2.CV_LOAD_IMAGE_GRAYSCALE)
+    return cv2.imread(impath, cv2.IMREAD_GRAYSCALE)
 
 def derive_m(img, rimg):
     ''' Derive m (intensity) based on paper formula '''
@@ -64,8 +65,8 @@ def enlarge_specularity(spec_mask):
 
     win_size, step_size = (3,3), 1
     enlarged_spec = np.array(spec_mask)
-    for r in xrange(0, spec_mask.shape[0], step_size):
-        for c in xrange(0, spec_mask.shape[1], step_size):
+    for r in range(0, spec_mask.shape[0], step_size):
+        for c in range(0, spec_mask.shape[1], step_size):
             # yield the current window
             win = spec_mask[r:r + win_size[1], c:c + win_size[0]]
             
