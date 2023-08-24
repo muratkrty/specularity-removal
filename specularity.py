@@ -31,12 +31,12 @@ def derive_saturation(img, rimg):
     for ri in range(r):
         for ci in range(c):
             #opencv ==> b,g,r order
-            s1 = img[ri,ci][0] + img[ri,ci][2]
+            s1 = np.clip(img[ri,ci][0] + img[ri,ci][2])
             s2 = 2 * img[ri,ci][1] 
             if  s1 >=  s2:
-                s_img[ri,ci] = 1.5*(img[ri,ci][2] - rimg[ri,ci])
+                s_img[ri,ci] = 1.5*np.clip((img[ri,ci][2] - rimg[ri,ci]))
             else:
-                s_img[ri,ci] = 1.5*(rimg[ri,ci] - img[ri,ci][0])
+                s_img[ri,ci] = 1.5*np.clip((rimg[ri,ci] - img[ri,ci][0]))
 
     return s_img
 
